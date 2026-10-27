@@ -354,6 +354,14 @@ The engineering specification defined a 20-item verification plan (docs/verifica
 
 ## 9. Synthesis & Physical Design (RTL-to-GDS Flow)
 
+> [!TIP]
+> Comprehensive gate-level schematics, stage-by-stage timing slack screenshots, power distribution plots, and machine-readable ASCII reports are archived in [
+esults/](results/). See [
+esults/synthesis/](results/synthesis/), [
+esults/timing/](results/timing/), [
+esults/power/](results/power/), and [
+esults/physical_design/](results/physical_design/).
+
 The design was carried from synthesizable RTL through tapeout-ready layout using **Cadence Genus** and **Cadence Innovus**.
 
 ### 9.1 Cadence Genus Synthesis
@@ -434,6 +442,13 @@ To evaluate control stability, the hardware controller was co-simulated against 
 │       ├── simulation/
 │       ├── synthesis/
 │       └── physical_design/
+├── results/                               # Structured Engineering Evidence & Verification Reports
+│   ├── README.md                          # Master results index & PPA summary table
+│   ├── synthesis/                         # Genus gate-level schematics, logs & synthesis_summary.rpt
+│   ├── timing/                            # Innovus timing slack screenshots & timing_summary.rpt
+│   ├── power/                             # Power rail/grid layout & power_summary.rpt (3.176 mW)
+│   ├── physical_design/                   # Placement, CTS, NanoRoute, DRC & connectivity reports
+│   └── simulation/                        # ModelSim waveforms, regression pass logs & co-sim plots
 ├── rtl/                                   # Synthesizable Verilog-2001 RTL Source Files
 │   ├── actuator_interface.v               # Quadcopter X-configuration motor mixer
 │   ├── anti_windup.v                      # Conditional integration clamping

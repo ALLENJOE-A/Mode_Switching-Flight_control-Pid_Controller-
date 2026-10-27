@@ -69,6 +69,12 @@ All candidate files have been classified into four rigorous engineering categori
 | `docs/physical_design.md` | B | Comprehensive physical design, timing, and PPA report | ~10 KB | Direct Git Blob |
 | `docs/publication_manifest.md` | A | This document (audit & classification manifest) | ~4 KB | Direct Git Blob |
 | `docs/figures/**` | B | Verified layout, schematic, and waveform screenshot evidence | ~7.8 MB | Direct Git Blobs |
+| `results/README.md` | A | Master results index, PPA summary table, and PDK boundary notes | ~3.5 KB | Direct Git Blob |
+| `results/synthesis/**` | B | Authentic Genus schematics, completion logs, and summary report | ~600 KB | Direct Git Blobs |
+| `results/timing/**` | B | Authentic Innovus timing slack screenshots & timing_summary.rpt | ~2.5 MB | Direct Git Blobs |
+| `results/power/**` | B | Power grid distribution screenshot and power_summary.rpt | ~240 KB | Direct Git Blobs |
+| `results/physical_design/**` | B | Placement, CTS, NanoRoute, final layout, DRC/connectivity reports | ~3.0 MB | Direct Git Blobs |
+| `results/simulation/**` | B | Verification pass screenshots, waveforms, latency & co-sim plots | ~850 KB | Direct Git Blobs |
 | `sim/work/*` | C | Transient ModelSim compiled library database | ~1.0 MB | Excluded (`.gitignore`) |
 | `sim/transcript` | C | Transient run log overwritten on every simulation | 3,288 | Excluded (`.gitignore`) |
 | `PS02_Mode_Switching_PID_Controller/*`| C | Accidental nested clone directory | ~1.2 MB | Excluded (`.gitignore`) |
