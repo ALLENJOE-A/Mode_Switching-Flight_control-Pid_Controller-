@@ -1,0 +1,76 @@
+================================================================================
+  CADENCE INNOVUS PHYSICAL DESIGN TIMING & SLACK CLOSURE REPORT
+  Project: PS-02 Mode-Switching Flight Control PID Controller
+  Authors: Allen Joe A & T. Venkata Sai Neeraj
+  Design:  ps02_top
+================================================================================
+
+1. CLOCK SPECIFICATION & CONSTRAINTS
+--------------------------------------------------------------------------------
+Clock Name:              clk
+Clock Period:            20.000 ns (Target Frequency: 50.000 MHz)
+Target Setup Slack:      > 0.000 ns (Zero timing violations)
+Target Hold Slack:       >= 0.000 ns
+Total Timing Paths:      1,118 analyzed paths
+Total Net Count:         ~21,600 nets
+
+2. TIMING METRICS BY IMPLEMENTATION STAGE
+--------------------------------------------------------------------------------
+Stage 1: Pre-CTS (Ideal Clock, Initial Placement)
+  - Setup WNS:           -7.733 ns
+  - Setup TNS:           -727.609 ns
+  - Setup Violations:    220 paths (out of 1118)
+  - Hold WNS:            -0.180 ns
+  - Hold TNS:            -30.123 ns
+  - Hold Violations:     677 paths (out of 1118)
+  - Max Cap Violations:  158 nets (worst = -0.155)
+  - Core Cell Density:   69.886%
+  - Screenshot Evidence: 01_prects_setup_timing.png, 02_prects_hold_timing.png
+
+Stage 2: Pre-CTS (Post-Optimization / ECO)
+  - Setup WNS:           +0.002 ns  --> [MET / ZERO VIOLATIONS]
+  - Setup TNS:           0.000 ns
+  - Setup Violations:    0 paths
+  - Hold WNS:            -0.186 ns
+  - Hold Violations:     648 paths (deferred to CTS buffer insertion)
+  - Core Cell Density:   70.120%
+  - Screenshot Evidence: 03_prects_eco_setup_timing.png, 04_prects_eco_hold_timing.png
+
+Stage 3: Post-CTS (Propagated Real Clock Tree)
+  - Setup WNS:           -0.146 ns
+  - Setup TNS:           -2.525 ns
+  - Setup Violations:    56 paths
+  - Hold WNS:            -0.187 ns
+  - Hold TNS:            -28.881 ns
+  - Hold Violations:     668 paths
+  - Core Cell Density:   71.590% (clock buffer and inverter tree inserted)
+  - Screenshot Evidence: 05_postcts_setup_timing.png, 06_postcts_hold_timing.png
+
+Stage 4: Post-CTS (Post-Optimization / ECO)
+  - Setup WNS:           +0.031 ns  --> [MET / ZERO VIOLATIONS]
+  - Setup TNS:           0.000 ns
+  - Setup Violations:    0 paths
+  - Hold WNS:            -0.010 ns
+  - Hold TNS:            -0.022 ns
+  - Hold Violations:     5 paths
+  - Core Cell Density:   72.840%
+  - Screenshot Evidence: 07_postcts_eco_setup_timing.png, 08_postcts_eco_hold_timing.png
+
+Stage 5: Post-Route (NanoRoute Detailed Routing, RC Extraction & Post-Route ECO)
+  - Setup WNS:           +0.016 ns  --> [MET / ZERO VIOLATIONS]
+  - Setup TNS:           0.000 ns
+  - Setup Violations:    0 paths (across all 1,118 paths)
+  - Hold WNS:            -0.000 ns  --> [1 marginal reg2reg path at 0.000 threshold]
+  - Hold TNS:            -0.000 ns
+  - Hold Violations:     1 path (Default path group: +0.002 ns)
+  - Horizontal Overflow: 0.00%
+  - Vertical Overflow:   0.00%
+  - Final Cell Density:  74.835%
+  - Screenshot Evidence: 09_postroute_eco_setup_timing.png, 10_postroute_eco_hold_timing.png, 11_postroute_eco_command.png
+
+3. TIMING CLOSURE CONCLUSION & SIGNOFF RECOMMENDATIONS
+--------------------------------------------------------------------------------
+Setup Timing Closure:    CLOSED (+0.016 ns margin at 50 MHz under OCV/SI conditions).
+Hold Timing Status:      ESSENTIALLY CLOSED (-0.000 ns on 1 marginal path at rounding limit).
+Pre-Tapeout Action:      Standard ASIC signoff buffer padding recommended prior to final GDS export.
+================================================================================
