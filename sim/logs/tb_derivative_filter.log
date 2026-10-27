@@ -1,0 +1,27 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_derivative_filter 
+# Start time: 22:35:02 on Oct 27,2026
+# Loading work.tb_derivative_filter
+# Loading work.derivative_filter
+# Loading work.sat_mult_q88
+# run -all
+# ============================================================
+#  [TB_DERIVATIVE_FILTER] Starting Self-Checking Filter Tests
+# ============================================================
+#  Testing Setpoint Step: Changing setpoint from 0 to +45 deg...
+#  [PASS] Test 2: Zero Derivative Kick Verified! d_filt strictly 0x0000.
+#  Testing Measurement Step: meas jumps from +5.0 to +15.0 deg...
+#    Tick 1: d_filt=0xfb00 (exp 0xFB00)
+#  [PASS] Test 3 Tick 1: Filter filtered step correctly (-5.0 deg)
+#    Tick 2: d_filt=0xfd80 (exp 0xFD80)
+#  [PASS] Test 3 Tick 2: Smooth decay verified (-2.5 deg)
+# ============================================================
+#  *** TEST PASSED: DERIVATIVE FILTER VERIFIED ***
+# ============================================================
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_derivative_filter.v(146)
+#    Time: 551 ns  Iteration: 0  Instance: /tb_derivative_filter
+# End time: 22:35:02 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

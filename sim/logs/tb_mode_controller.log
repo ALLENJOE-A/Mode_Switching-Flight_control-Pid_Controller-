@@ -1,0 +1,23 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_mode_controller 
+# Start time: 22:35:05 on Oct 27,2026
+# Loading work.tb_mode_controller
+# Loading work.mode_controller
+# run -all
+# ============================================================
+#  [TB_MODE_CONTROLLER] Starting Mode Manager FSM Tests
+# ============================================================
+#  [PASS] Test 1: Reset default mode verified as STABILIZE (01)
+#  [PASS] Test 2: Synchronous Transition to ACRO (00) verified at cycle boundary.
+#  [PASS] Test 3: Transition to ALT_HOLD (10) verified.
+#  [PASS] Test 4: Emergency Escalation to FAILSAFE (11) verified.
+# ============================================================
+#  *** TEST PASSED: MODE CONTROLLER FSM FULLY VERIFIED ***
+# ============================================================
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_mode_controller.v(158)
+#    Time: 271 ns  Iteration: 0  Instance: /tb_mode_controller
+# End time: 22:35:05 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

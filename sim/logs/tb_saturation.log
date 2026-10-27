@@ -1,0 +1,28 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_saturation 
+# Start time: 22:35:01 on Oct 27,2026
+# Loading work.tb_saturation
+# Loading work.sat_mult_q88
+# Loading work.sat_add_sub_q88
+# Loading work.clamp_bounds_q88
+# run -all
+# ============================================================
+#  [TB_SATURATION] Starting Self-Checking Saturation Tests
+# ============================================================
+#  [PASS] Test 1: Normal Mult: 2.0 * 3.0 = 6.0 (0x0600)
+#  [PASS] Test 2: Positive Mult Saturation: 10 * 20 -> 0x7fff (clamped max)
+#  [PASS] Test 3: Negative Mult Saturation: -10 * 20 -> 0x8000 (clamped min)
+#  [PASS] Test 4: Add Positive Saturation: 100 + 50 -> 0x7fff
+#  [PASS] Test 5: Sub Negative Saturation: -100 - 50 -> 0x8000
+#  [PASS] Test 6a: Clamped high (+80 -> +64): 0x4000
+#  [PASS] Test 6b: Clamped low (-80 -> -64): 0xc000
+# ============================================================
+#  *** TEST PASSED: ALL SATURATION CHECKS VERIFIED ***
+# ============================================================
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_saturation.v(156)
+#    Time: 70 ns  Iteration: 0  Instance: /tb_saturation
+# End time: 22:35:01 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,23 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_bumpless_transfer 
+# Start time: 22:35:04 on Oct 27,2026
+# Loading work.tb_bumpless_transfer
+# Loading work.bumpless_transfer
+# run -all
+# ============================================================
+#  [TB_BUMPLESS_TRANSFER] Starting Bumpless Transfer Tests
+# ============================================================
+#  Test 1: u_prev=+30, P_new=+10, D_new=+2 -> new_I = 0x1200 (exp 0x1200 = +18.0), disc = 0x0000
+#  [PASS] Test 1: Exact Bumpless Transfer Verified! Discontinuity = 0.0.
+#  Test 2: u_prev=+50, P_new=+5 -> I_target=+45 clamped to max_i=0x2000, disc=0x0d00 (exp 0x0D00 = +13.0)
+#  [PASS] Test 2: Clamping and Bounded Discontinuity Verified correctly.
+# ============================================================
+#  *** TEST PASSED: BUMPLESS TRANSFER LOGIC VERIFIED ***
+# ============================================================
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_bumpless_transfer.v(127)
+#    Time: 131 ns  Iteration: 0  Instance: /tb_bumpless_transfer
+# End time: 22:35:04 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

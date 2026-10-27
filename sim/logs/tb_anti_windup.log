@@ -1,0 +1,24 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_anti_windup 
+# Start time: 22:35:03 on Oct 27,2026
+# Loading work.tb_anti_windup
+# Loading work.anti_windup
+# run -all
+# ============================================================
+#  [TB_ANTI_WINDUP] Starting Anti-Windup Clamping Tests
+# ============================================================
+#  [PASS] Test 1: Normal Linear Operation: allowed_inc = 0x0100
+#  [PASS] Test 2: Positive Saturation: Output clamped to 0x4000, integration gated to 0.
+#  [PASS] Test 3: Saturation Recovery: Negative integration allowed (0xfe00) to un-saturate.
+#  [PASS] Test 4: Negative Saturation: Output clamped to 0xc000, integration gated to 0.
+#  [PASS] Test 5: Integrator Accumulator Clamp: Clamped at max_i, increment gated to 0.
+# ============================================================
+#  *** TEST PASSED: ANTI-WINDUP LOGIC FULLY VERIFIED ***
+# ============================================================
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_anti_windup.v(145)
+#    Time: 50 ns  Iteration: 0  Instance: /tb_anti_windup
+# End time: 22:35:03 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

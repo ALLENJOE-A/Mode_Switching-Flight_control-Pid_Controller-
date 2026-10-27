@@ -1,0 +1,73 @@
+Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -do "run -all; quit -f" work.tb_ps02_top 
+# Start time: 22:35:07 on Oct 27,2026
+# Loading work.tb_ps02_top
+# Loading work.ps02_top
+# Loading work.control_tick_generator
+# Loading work.watchdog_timer
+# Loading work.mode_controller
+# Loading work.gain_bank
+# Loading work.config_registers
+# Loading work.attitude_controller
+# Loading work.sat_mult_q88
+# Loading work.bumpless_transfer
+# Loading work.rate_controller
+# Loading work.pid_controller
+# Loading work.derivative_filter
+# Loading work.anti_windup
+# Loading work.actuator_interface
+# Loading work.failsafe_controller
+# run -all
+# ================================================================================
+#    PS-02 TOP-LEVEL FULL-CHIP INTEGRATION REGRESSION (VLSI HACKATHON 2026)      
+# ================================================================================
+# 
+#  [CHECK 1] Verifying Synchronous Reset and Default State...
+#   -> PASS: Mode=STABILIZE (01), Failsafe=0, Watchdog=0
+# 
+#  [CHECK 2] Verifying STABILIZE Cascaded Attitude/Rate Control...
+#   -> Motor commands: M0=0x1130, M1=0x52d0, M2=0x52d0, M3=0x1130
+#   -> PASS: Cascaded control driving differential roll correction correctly.
+# 
+#  [CHECK 3] Verifying ACRO Mode (Rate-Only, Outer Loop Bypassed)...
+#   -> PASS: Mode transitioned cleanly to ACRO (00).
+#   -> PASS: ACRO direct rate command tracked: M1=0x5104.
+# 
+#  [CHECK 5] Verifying ALTITUDE_HOLD Vertical Channel...
+#   -> ALT_HOLD active: M0=0x3ebc, M1=0x4344, M2=0x4344, M3=0x3ebc
+#   -> PASS: Altitude hold channel applied throttle trim symmetrically across motors.
+# 
+#  [CHECK 6] Verifying Bumpless Mode Transfer Continuity...
+#   -> PASS: Mode switched to STABILIZE with bumpless transfer engaged.
+#     Before: M0=0x3ebc M1=0x4344 | After: M0=0x2fbc M1=0x3444
+# 
+#  [CHECK 8] Verifying Per-Mode Gain Bank Register Access...
+#   -> PASS: Register write & readback verified: read 0x0250
+# 
+#  [CHECK 10] Verifying Anti-Windup Clamping under Sustained Error...
+#   -> PASS: Saturation detected and telemetry flag asserted: 0x81
+#   -> Recovered from saturation: M0=0x5adc M1=0x0924
+# 
+#  [CHECK 14] Verifying Sensor Dropout, Watchdog Alarm, and FAILSAFE Policy...
+#   -> PASS: Stale sensor detected! Watchdog alarm=1, Failsafe active=1
+#   -> Failsafe Motor Duties: M0=0x1900, M1=0x1900, M2=0x1900, M3=0x1900
+#   -> PASS: Safe fixed descent duty (25%) enforced across all motors.
+# 
+#  [CHECK 16] Verifying Sensor Recovery Handshake...
+#   -> PASS: Watchdog alarm cleared automatically on fresh sensor arrival.
+# 
+#  [CHECK 17] Verifying Deterministic Sample Latency...
+#   -> PASS: Sample-to-output latency verified as exactly 1-3 clock cycles (Deterministic).
+# 
+# ================================================================================
+#    FULL-CHIP REGRESSION SUMMARY: 13 PASSED, 0 FAILED
+# ================================================================================
+#  *** TEST PASSED: ALL VERIFICATION CHECKLIST ITEMS VERIFIED! ***
+# 
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_ps02_top.v(512)
+#    Time: 78870 ns  Iteration: 1  Instance: /tb_ps02_top
+# End time: 22:35:07 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
