@@ -3,7 +3,7 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # 10.5b
 
 # vsim -c -do "run -all; quit -f" work.tb_pid_controller 
-# Start time: 22:35:03 on Oct 27,2026
+# Start time: 23:37:12 on Oct 27,2026
 # Loading work.tb_pid_controller
 # Loading work.pid_controller
 # Loading work.sat_mult_q88
@@ -19,10 +19,11 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 #  [PASS] Test 3: Integrator accumulation verified over multiple sample ticks.
 #    After reload strobe: i_term_out = 0x1000 (exp 0x1000 = +16.0)
 #  [PASS] Test 4: Bumpless Integrator State Reload verified (loaded 0x1000)
+#  [PASS] Test 5: Symmetric bipolar response verified: P = -10.0 (0xf600)
 # ============================================================
 #  *** TEST PASSED: PID CONTROLLER FULLY VERIFIED ***
 # ============================================================
-# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_pid_controller.v(168)
-#    Time: 290 ns  Iteration: 1  Instance: /tb_pid_controller
-# End time: 22:35:04 on Oct 27,2026, Elapsed time: 0:00:01
+# ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_pid_controller.v(181)
+#    Time: 291 ns  Iteration: 0  Instance: /tb_pid_controller
+# End time: 23:37:12 on Oct 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

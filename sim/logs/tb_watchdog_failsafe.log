@@ -3,7 +3,7 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # 10.5b
 
 # vsim -c -do "run -all; quit -f" work.tb_watchdog_failsafe 
-# Start time: 22:35:06 on Oct 27,2026
+# Start time: 23:37:06 on Oct 27,2026
 # Loading work.tb_watchdog_failsafe
 # Loading work.watchdog_timer
 # Loading work.failsafe_controller
@@ -23,5 +23,5 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # ============================================================
 # ** Note: $finish    : D:/3RD YEAR MATERIALS/Hackthon/PS02_Mode_Switching_PID_Controller/tb/tb_watchdog_failsafe.v(196)
 #    Time: 2131 ns  Iteration: 0  Instance: /tb_watchdog_failsafe
-# End time: 22:35:06 on Oct 27,2026, Elapsed time: 0:00:00
+# End time: 23:37:06 on Oct 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

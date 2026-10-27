@@ -157,6 +157,19 @@ module tb_pid_controller;
             $display(" [PASS] Test 4: Bumpless Integrator State Reload verified (loaded 0x%04h)", i_term_out);
         end
 
+        // ------------------------------------------------------------
+        // Test 5: Negative Error Step & Symmetric Bipolar Response
+        // error_in = -10.0 (0xF600), Kp = 1.0 -> P-term should equal -10.0 (0xF600)
+        // ------------------------------------------------------------
+        error_in = -16'sh0A00;
+        #1;
+        if (p_term_out !== -16'sh0A00) begin
+            $display(" [FAIL] Test 5: Negative P-term mismatch! Expected 0xF600, got 0x%04h", p_term_out);
+            err_count = err_count + 1;
+        end else begin
+            $display(" [PASS] Test 5: Symmetric bipolar response verified: P = -10.0 (0x%04h)", p_term_out);
+        end
+
         // Summary
         $display("============================================================");
         if (err_count == 0) begin
