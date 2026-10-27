@@ -53,11 +53,13 @@ All candidate files have been classified into four rigorous engineering categori
 | `sim/run_all.do` | A | ModelSim compilation and batch execution macro | 1,947 | Direct Git Blob |
 | `sim/run_nclaunch.sh` | A | Shell wrapper for Cadence NCLaunch batch execution | 2,660 | Direct Git Blob |
 | `sim/logs/*.log` (8 files) | B | Verifiable simulation logs (all 8 tests PASS, 0 errors) | ~13 KB | Direct Git Blobs |
-| `scripts/simulation/run_modelsim.bat` | A | Windows one-click batch script for ModelSim regression | 751 | Direct Git Blob |
-| `scripts/simulation/run_regression.py` | A | Python automated test runner and pass/fail summary script | 6,021 | Direct Git Blob |
+| `scripts/run_modelsim.bat` | A | Windows one-click batch script for ModelSim regression | 751 | Direct Git Blob |
+| `scripts/run_regression.py` | A | Portable Python automated test runner with simulator autodetect | ~7.5 KB | Direct Git Blob |
 | `constraints/ps02_top.sdc` | A | SDC timing constraints targeting 50 MHz operation | ~2.5 KB | Direct Git Blob |
-| `scripts/synthesis/genus_synth.tcl` | A | Reproducible Cadence Genus synthesis script | ~3.5 KB | Direct Git Blob |
-| `scripts/physical_design/innovus_pnr.tcl` | A | Reproducible Cadence Innovus place-and-route flow script | ~6.0 KB | Direct Git Blob |
+| `scripts/synthesis/genus_synth.tcl` | A | Reproducible Cadence Genus synthesis script | ~4.0 KB | Direct Git Blob |
+| `scripts/synthesis/genus_config.tcl.template` | A | Template for user PDK library path configuration | ~1.5 KB | Direct Git Blob |
+| `scripts/physical_design/innovus_pnr.tcl` | A | Reproducible Cadence Innovus place-and-route flow script | ~7.0 KB | Direct Git Blob |
+| `scripts/physical_design/innovus_config.tcl.template` | A | Template for user LEF, tech, & rule configuration | ~2.0 KB | Direct Git Blob |
 | `docs/architecture.md` | A | Detailed architectural block specifications | 10,544 | Direct Git Blob |
 | `docs/fixed_point_design.md` | A | Signed Q8.8 fixed-point arithmetic specification | 5,769 | Direct Git Blob |
 | `docs/interface_specification.md` | A | Port list and memory-mapped register map | 8,764 | Direct Git Blob |
@@ -72,3 +74,5 @@ All candidate files have been classified into four rigorous engineering categori
 | `PS02_Mode_Switching_PID_Controller/*`| C | Accidental nested clone directory | ~1.2 MB | Excluded (`.gitignore`) |
 | `5T OTA` | D | Unrelated project directory | — | Excluded (Out of Scope) |
 | `Silicon_2400_outputs` | D | External reference workspace | — | Excluded (Untouched) |
+| `scripts/*/*_config.tcl` | D | Local user PDK path definitions | — | Excluded (`.gitignore`) |
+| `*.lib`, `*.lef`, `*.gds` | D | Proprietary foundry technology collateral | — | Excluded (`.gitignore`) |
