@@ -1,0 +1,59 @@
+================================================================================
+  CADENCE GENUS LOGIC SYNTHESIS SUMMARY REPORT
+  Project: PS-02 Mode-Switching Flight Control PID Controller
+  Authors: Allen Joe A & T. Venkata Sai Neeraj
+  Design:  ps02_top
+================================================================================
+
+1. SYNTHESIS EXECUTION ENVIRONMENT
+--------------------------------------------------------------------------------
+Tool Name:               Cadence Genus(TM) Synthesis Solution
+Script Used:             scripts/synthesis/genus_synth.tcl
+Target Frequency:        50.000 MHz (Clock Period T = 20.000 ns)
+Target Clock Port:       clk (uncertainty = 0.200 ns, latency = 0.500 ns)
+Reset Signal:            rst_n (active-low asynchronous/synchronous)
+Operating Mode:          Generic Digital ASIC Flow (90nm Flow Mode)
+Power Analysis Mode:     Vectorless Statistical Estimation
+
+2. TOP-LEVEL SYNTHESIS HIERARCHY
+--------------------------------------------------------------------------------
+Top-Level Module:        ps02_top
+Sub-Modules Elaborated:
+  - attitude_controller  (Cascaded Roll/Pitch Outer-Loop Proportional Controllers)
+  - rate_controller      (3-Axis Inner-Loop: Roll, Pitch, Yaw PID Controllers)
+    - pid_controller (x3) (Parallel Q8.8 Arithmetic Computation Engines)
+      - sat_mult_q88      (Signed Q8.8 Saturating Multiplier)
+      - sat_add_sub_q88   (Signed Q8.8 Saturating Adder/Subtractor)
+      - clamp_bounds_q88  (Output Limiter and Range Bounder)
+    - derivative_filter(x3) (First-Order Low-Pass IIR Derivative Filter)
+    - anti_windup (x3)    (Conditional Integration and Back-Calculation)
+  - bumpless_transfer(x3)(Integrator State Recalculation across Mode Transitions)
+  - mode_controller      (4-State FSM: ACRO, STABILIZE, ALT_HOLD, FAILSAFE)
+  - control_tick_generator(Selectable 1/2/4/8 kHz Timing Strobe Generator)
+  - watchdog_timer       (500,000-Cycle Sensor Dropout Timeout Counter)
+  - failsafe_controller  (Safe Descent Actuator Policy Engine)
+  - gain_bank            (Per-Mode Atomic PID Gain Parameter Registers)
+  - config_registers     (Synchronous Memory-Mapped Control Register File)
+  - actuator_interface   (Quadcopter X-Configuration Motor Mixer Matrix)
+
+3. IMPLEMENTATION & NETLIST ARTIFACTS
+--------------------------------------------------------------------------------
+Elaborated Netlist:      Elaborated cleanly with 0 syntax errors, 0 warnings
+Technology Mapping:      Fully mapped into standard-cell logic gates
+Total Interconnect Nets: ~21,600 nets across full chip
+Timing Paths Analyzed:   1,118 register-to-register and I/O paths
+Synthesis Status:        SYNTHESIS FLOW COMPLETED (Verified via Genus Log)
+Generated Netlist:       ps02_top_synth.v (Passed to Cadence Innovus)
+Exported Constraints:    ps02_top_synth.sdc (Passed to Cadence Innovus)
+
+4. EVIDENCE & ARCHIVE CITATIONS
+--------------------------------------------------------------------------------
+Completion Log:          results/synthesis/01_genus_flow_completion_log.png
+Full Mapped Schematic:   results/synthesis/02_ps02_top_mapped_schematic.png
+Hierarchical Schematic:  results/synthesis/03_ps02_top_hierarchical_schematic.png
+Sub-Block Schematics:    results/synthesis/04_schematic_attitude_controller.png through 09_schematic_ps02_top_complete.png
+Project Report:          TEAM 04_PS-02.pdf (Chapter 6, Figures 13, 14, 15)
+
+NOTE: Proprietary foundry standard-cell characterization libraries (.lib)
+cannot be redistributed in this public repository under vendor license agreements.
+================================================================================
