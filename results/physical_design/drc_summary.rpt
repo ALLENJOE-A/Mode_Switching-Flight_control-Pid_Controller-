@@ -1,0 +1,44 @@
+================================================================================
+  CADENCE INNOVUS PHYSICAL DESIGN DESIGN RULE CHECK (DRC) REPORT
+  Project: PS-02 Mode-Switching Flight Control PID Controller
+  Authors: Allen Joe A & T. Venkata Sai Neeraj
+  Design:  ps02_top
+================================================================================
+
+1. VERIFICATION BOUNDARY & SETUP
+--------------------------------------------------------------------------------
+Command:                 verifyGeometry -report results/physical_design/drc.rpt
+Design Die Box:          (0.000, 0.000) to (446.310, 444.280) um
+Total Core Area:         0.1983 mm^2 (198,287.6 um^2)
+Sub-Area Partitioning:   16 verification sub-regions (4x4 spatial grid)
+Check Scope:             Metal spacing, minimum width, notch, enclosure,
+                         via overhang, antenna rules, and filler boundary rules.
+
+2. DRC RESULTS BY SUB-REGION
+--------------------------------------------------------------------------------
+Sub-Region [0,0]:        0 Violations
+Sub-Region [0,1]:        0 Violations
+Sub-Region [0,2]:        0 Violations
+Sub-Region [0,3]:        0 Violations
+Sub-Region [1,0]:        0 Violations
+Sub-Region [1,1]:        0 Violations
+Sub-Region [1,2]:        0 Violations
+Sub-Region [1,3]:        0 Violations
+Sub-Region [2,0]:        0 Violations
+Sub-Region [2,1]:        0 Violations
+Sub-Region [2,2]:        0 Violations
+Sub-Region [2,3]:        0 Violations
+Sub-Region [3,0]:        0 Violations
+Sub-Region [3,1]:        0 Violations
+Sub-Region [3,2]:        0 Violations
+Sub-Region [3,3]:        0 Violations
+--------------------------------------------------------------------------------
+TOTAL GEOMETRY VIOLATIONS: 0 VIOLATIONS (Verification Complete : 0 Viols.)
+STATUS:                    CLEAN / PASSED (Screenshot: 06_verify_drc_zero_violations.png)
+
+3. COMPLIANCE & SIGNOFF NOTE
+--------------------------------------------------------------------------------
+This check was executed internally within Cadence Innovus verifyGeometry.
+External signoff DRC (e.g., Mentor Calibre or Cadence Pegasus) requires full
+foundry rule deck streaming, which was not performed in the hackathon flow.
+================================================================================

@@ -1,0 +1,39 @@
+================================================================================
+  CADENCE GENUS / INNOVUS POWER DISSIPATION & POWER GRID REPORT
+  Project: PS-02 Mode-Switching Flight Control PID Controller
+  Authors: Allen Joe A & T. Venkata Sai Neeraj
+  Design:  ps02_top
+================================================================================
+
+1. POWER GRID ARCHITECTURE & DISTRIBUTION
+--------------------------------------------------------------------------------
+VDD / VSS Supply Ring:   Core ring routed on Metal4 and Metal5 layers
+Standard Cell Power:     Continuous horizontal Metal1 follow-pin rails
+Power Straps:            Vertical Metal4 / Horizontal Metal5 power mesh
+IR-Drop & EM Condition:  Balanced grid meeting current density limits
+Screenshot Evidence:     01_power_rail_and_grid.png (Report Figure 17)
+
+2. POWER DISSIPATION ESTIMATION (AT 50.0 MHz)
+--------------------------------------------------------------------------------
+Analysis Methodology:    Vectorless Statistical Power Estimation
+Supply Voltage (VDD):    1.000 V (Typical Digital Standard Cell Operating Corner)
+Operating Frequency:     50.000 MHz
+
+Power Breakdown:
+--------------------------------------------------------------------------------
+Power Component          Power Value (mW)    Percentage of Total
+--------------------------------------------------------------------------------
+Internal Cell Power:     2.544 mW            80.1%
+Switching Net Power:     0.632 mW            19.9%
+Static Leakage Power:    0.00012 mW (120 nW) < 0.01%
+--------------------------------------------------------------------------------
+TOTAL CHIP POWER:        3.176 mW            100.0%
+
+3. OPERATIONAL NOTES
+--------------------------------------------------------------------------------
+Vectorless Analysis:     Vectorless mode applies default statistical toggle rates
+                         (0.1 activity factor on input and internal nets) in
+                         accordance with standard Cadence Genus/Innovus estimation.
+Stimulus Warning:        Tool noted that simulation-based VCD/FSDB toggle
+                         stimulus was not bound during the initial batch run.
+================================================================================

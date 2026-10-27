@@ -1,0 +1,36 @@
+================================================================================
+  CADENCE INNOVUS PHYSICAL DESIGN CONNECTIVITY VERIFICATION REPORT
+  Project: PS-02 Mode-Switching Flight Control PID Controller
+  Authors: Allen Joe A & T. Venkata Sai Neeraj
+  Design:  ps02_top
+================================================================================
+
+1. CONNECTIVITY VERIFICATION SETUP
+--------------------------------------------------------------------------------
+Command:                 verifyConnectivity -type all -error 1000 -warning 50
+Processed Net Count:     ~20,000 signal and power nets
+Power & Ground Nets:     VDD, VSS
+Signal Nets:             All internal interconnect, clock, and I/O bus nets
+Check Scope:             Open nets, short circuits, dangling wires, unconnected
+                         pins, loop violations, and antenna breaks.
+
+2. VERIFICATION RESULTS
+--------------------------------------------------------------------------------
+Open Nets Found:         0
+Antenna Violations:      0
+Short Circuits Found:    0
+Dangling Vias:           0
+Unconnected Pins:        0
+Warnings Generated:      0
+
+Verification Message:    "Found no problems or warnings"
+TOTAL CONNECTIVITY VIOLS: 0 ERRORS, 0 WARNINGS
+STATUS:                  CLEAN / PASSED (Screenshot: 07_verify_connectivity_zero_violations.png)
+
+3. COMPLIANCE & SIGNOFF NOTE
+--------------------------------------------------------------------------------
+Cadence Innovus verifyConnectivity verifies complete topological electrical
+connectivity against the imported synthesized gate-level netlist. Full LVS
+(Layout Versus Schematic) against an external Golden SPICE netlist was not
+performed due to absence of an external signoff LVS tool suite.
+================================================================================
