@@ -1,0 +1,42 @@
+# ==============================================================================
+# Git Ignore Configuration: PS-02 Mode-Switching PID Flight Controller
+# ==============================================================================
+
+# Simulation transient databases & logs
+sim/work/
+sim/transcript
+*.wlf
+*.vcd
+*.fsdb
+*.log.tmp
+
+# Python execution caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cadence Genus & Innovus transient work directories
+fv/
+genus.cmd*
+genus.log*
+innovus.cmd*
+innovus.log*
+*.enc
+*.enc.dat/
+
+# Generated synthesis & physical design output binaries (preserve scripts & reports)
+results/synthesis/outputs/*.v
+results/synthesis/outputs/*.sdc
+results/physical_design/outputs/*.gds
+results/physical_design/outputs/*.enc
+
+# Accidental nested duplicate project directory
+PS02_Mode_Switching_PID_Controller/
+
+# Editor & OS metadata
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+.DS_Store
