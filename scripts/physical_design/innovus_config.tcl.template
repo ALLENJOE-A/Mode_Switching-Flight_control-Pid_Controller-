@@ -1,0 +1,20 @@
+################################################################################
+# Innovus Physical Design Configuration Template: innovus_config.tcl.template
+# Instructions:
+#   Copy this file to 'innovus_config.tcl' (ignored by Git) and configure
+#   with your local PDK technology LEF and MMMC setup.
+################################################################################
+
+# Standard-cell physical technology and cell LEF files
+# set init_lef_file [list \
+#     /opt/pdk/gpdk090/lef/tech.lef \
+#     /opt/pdk/gpdk090/lef/stdcells.lef \
+# ]
+
+# Top module and power nets
+# set init_top_cell "ps02_top"
+# set init_pwr_net  {VDD}
+# set init_gnd_net  {VSS}
+
+# Initial design execution
+# init_design

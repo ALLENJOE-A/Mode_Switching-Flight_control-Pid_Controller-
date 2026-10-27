@@ -30,6 +30,13 @@ results/synthesis/outputs/*.sdc
 results/physical_design/outputs/*.gds
 results/physical_design/outputs/*.enc
 
+# Local user-specific synthesis and implementation configurations
+scripts/synthesis/genus_config.tcl
+scripts/physical_design/innovus_config.tcl
+*.lib
+*.lef
+*.gds
+
 # Accidental nested duplicate project directory
 PS02_Mode_Switching_PID_Controller/
 
